@@ -1,0 +1,79 @@
+/* Contact Section */
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 80px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+
+}
+
+.contact-content {
+  width: 100%;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #8BBBC9; /* Soft Cyan */
+  margin-bottom: 10px;
+}
+
+.contact-description {
+  font-size: 1.2rem;
+  color: #6F7D91; /* Slate Gray */
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.07); /* Glassy touch */
+  color: #8BBBC9; /* Soft Cyan text */
+  outline: none;
+  text-align: left;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #6F7D91; /* Slate Gray placeholder */
+}
+
+.contact-btn {
+  padding: 12px;
+  font-size: 1.2rem;
+  color: white;
+  background: linear-gradient(145deg, #8BBBC9, #6F7D91); /* Frosted Glass Blue */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+  left: 10px;
+}
+
+.contact-btn:hover {
+  background: radial-gradient(circle at center, #4988CF, #1B1E30); /* Electric Glow */
+  box-shadow: 0 0 15px rgba(73, 136, 207, 0.6);
+  transform: scale(1.03);
+}
+
+.contact-status {
+  margin-top: 15px;
+  color: #8BBBC9;
+  font-weight: 500;
+}

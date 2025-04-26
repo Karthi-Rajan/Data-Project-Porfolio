@@ -1,0 +1,161 @@
+/* .about-me-fullscreen Section */
+.about-me-fullscreen {
+  z-index: 1;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  gap: 4rem;
+  flex-wrap: nowrap; /* ✅ Force horizontal layout */
+  overflow: hidden;   /* ✅ Prevent accidental scroll bars */
+}
+
+
+/* .about-me-text */
+.about-me-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+/* Intro and description texts */
+.intro-text {
+  font-size: clamp(1.8rem, 6vw, 3rem);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #cbf3ff;
+}
+
+
+.description-text {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  line-height: 1.8;
+  color: #5e7594;
+  font-family: 'Inter', sans-serif;
+}
+
+
+/* Divider line */
+.divider-line {
+  width: 1px;
+  height: 60%;
+  background-color: #a3c6ff; /* Charcoal Blue for divider */
+  transition: background-color 0.3s ease;
+}
+
+.divider-line:hover {
+  background-color: #4988CF; /* Electric Blue on hover */
+}
+
+/* Profile image and wrapper */
+.about-me-image {
+  flex: 1;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-wrapper {
+  border-radius: 50%;
+  padding: 10px;
+  background: linear-gradient(145deg, #8BBBC9, #6F7D91); /* Frosted Glass Blue */
+  display: inline-block;
+  box-shadow: 0 20px 40px rgba(73, 136, 207, 0.3);
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.2s ease;
+  display: block;
+}
+
+.profile-wrapper:hover {
+  transform: scale(1.05) rotateX(6deg) rotateY(-6deg);
+}
+
+.profile-image {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 10px 20px rgba(73, 136, 207, 0.3);
+}
+
+/* 🌍 Media Queries for Responsiveness */
+
+/* For smaller screens like mobile */
+@media (max-width: 1024px) {
+  .about-me-fullscreen {
+
+    flex-direction: row; /* ✅ Explicitly keep row direction */
+    align-items: center;
+    justify-content: space-between; /* Optional: Adds space between items */
+    gap: 2rem;
+  }
+  
+  
+
+  .about-me-text {
+    max-width: 50%; /* Limit text width for better readability */
+    padding: 1rem;
+  }
+
+  .about-me-image {
+    max-width: 40%;
+  }
+
+  .profile-wrapper {
+    padding: 8px;
+  }
+
+  .profile-image {
+    max-width: 250px;
+  }
+}
+
+/* For very small screens like portrait mobile */
+@media (max-width: 480px) {
+  .about-me-fullscreen {
+
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+
+  .about-me-text {
+    max-width: 50%; /* Limit text width for better readability */
+  }
+
+  .about-me-image {
+    max-width: 45%; /* Profile image adjusted */
+  }
+
+  .profile-wrapper {
+    padding: 5px;
+  }
+
+  .profile-image {
+    max-width: 180px;
+  }
+
+  .intro-text {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+  }
+
+  .description-text {
+    font-size: clamp(0.9rem, 4vw, 1rem);
+  }
+}
+.about-me-text {
+  flex: 1;
+  max-width: 500px; /* 🔽 slightly smaller than 600px */
+}
+
+.about-me-image {
+  flex: 1;
+  max-width: 320px; /* 🔽 reduced from 400px */
+}

@@ -1,0 +1,77 @@
+{
+    "name": "my-3d-portfolio",
+    "version": "1.0.0",
+    "description": "A 3D portfolio using React and Three.js",
+    "main": "src/index.js",
+    "homepage": "https://Selva-21-11.github.io/3D-portfolio",
+    "scripts": {
+        "start": "webpack serve --mode development",
+        "build": "webpack --mode production",
+        "test": "echo \"No test specified\" && exit 0"
+    },
+    "dependencies": {
+        "@react-spring/web": "^9.7.5",
+        "@react-three/drei": "^9.121.4",
+        "@react-three/postprocessing": "^2.19.1",
+        "bits": "^0.1.1",
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.7",
+        "express": "^4.21.2",
+        "framer-motion": "^11.18.2",
+        "gsap": "^3.11.1",
+        "http-proxy-middleware": "^2.0.9",
+        "nodemailer": "^6.10.0",
+        "ogl": "^1.0.11",
+        "react": "^18.3.1",
+        "react-bits": "^1.0.5",
+        "react-dom": "^18.2.0",
+        "react-icons": "^5.4.0",
+        "react-intersection-observer": "^9.16.0",
+        "react-player": "^2.16.0",
+        "react-scroll": "^1.9.0",
+        "react-slick": "^0.30.3",
+        "slick-carousel": "^1.8.1",
+        "three": "^0.173.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.26.7",
+        "@babel/plugin-proposal-private-methods": "^7.18.6",
+        "@babel/preset-env": "^7.26.7",
+        "@babel/preset-react": "^7.26.3",
+        "babel-loader": "^9.2.1",
+        "compression-webpack-plugin": "^11.1.0",
+        "copy-webpack-plugin": "^12.0.2",
+        "css-loader": "^7.1.2",
+        "css-minimizer-webpack-plugin": "^7.0.0",
+        "file-loader": "^6.2.0",
+        "html-webpack-plugin": "^5.6.3",
+        "mini-css-extract-plugin": "^2.9.2",
+        "react-router-dom": "^6.4.0",
+        "style-loader": "^4.0.0",
+        "typescript": "^4.9.5",
+        "url-loader": "^4.1.1",
+        "webpack": "^5.97.1",
+        "webpack-cli": "^6.0.1",
+        "webpack-dev-server": "^5.2.0"
+    },
+    "keywords": [
+        "3d",
+        "portfolio",
+        "react",
+        "threejs"
+    ],
+    "author": "Your Name",
+    "license": "MIT",
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
+}
