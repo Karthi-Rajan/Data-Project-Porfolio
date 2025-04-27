@@ -1,0 +1,38 @@
+name: Deploy React App to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Deploy when pushing to 'main' branch
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build Project
+        run: npm run build  # Ensure Webpack outputs to 'dist'
+
+      - name: Create .nojekyll file to disable Jekyll
+        run: touch dist/.nojekyll  # Prevents GitHub Pages from ignoring files
+
+      - name: Deploy to deploy Branch
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages  # Use the 'deploy' branch for deployment
+          folder: dist  # The folder containing built files
+          clean: true  # Removes old files before deploying
