@@ -11,7 +11,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[contenthash].js', // Added contenthash for better caching
-        publicPath: "/Data-Project-Porfolio/", // 👈 Ensures correct asset path
+        publicPath: "/", // 👈 Ensures correct asset path
         chunkFilename: '[name].[contenthash].js', // Added contenthash for dynamic chunks
     },
     module: {
