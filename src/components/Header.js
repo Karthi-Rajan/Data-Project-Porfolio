@@ -1,10 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { MdEmail } from "react-icons/md"; // <-- New import for Email icon
 
 const socialLinks = [
-  { icon: <FaLinkedin />, url: " https://www.linkedin.com/in/karthirajan07" },
-  { icon: <FaGithub />, url: "https://github.com/Karthi-Rajan" }, 
+  { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/karthirajan07" },
+  { icon: <FaGithub />, url: "https://github.com/Karthi-Rajan" },
+  { icon: <MdEmail />, url: "https://mail.google.com/mail/?view=cm&to=karthirajan07@gmail.com" }, // <-- Email link (change your email here)
 ];
 
 const logoVariants = {
