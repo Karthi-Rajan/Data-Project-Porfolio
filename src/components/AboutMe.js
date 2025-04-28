@@ -35,11 +35,12 @@ const AboutMe = () => {
       >
         <h1 className="intro-text">Hi, I’m Karthi Rajan</h1>
         <p className="description-text">
-I’m a Data Analyst with a passion for transforming complex data into actionable insights. 
-Leveraging my expertise in Power BI, SQL, Python, Databricks, and BigQuery, I design and implement data solutions that empower businesses to make informed decisions. 
-From building dynamic dashboards to optimizing data workflows, I blend analytical rigor with a creative touch to deliver visuals that are both impactful and intuitive. 
-My approach is data-driven, with a focus on precision and clarity, ensuring every project not only meets but exceeds expectations.
-"Data is not just numbers, it's a story waiting to be told — and I’m here to help you see it."
+        I am a dedicated Data Enthusiast with 6 months of professional experience, including an internship at ELGi Equipments Pvt. Ltd., 
+        where I focused on developing dynamic dashboards for various business departments. 
+        I specialize in transforming complex data into actionable insights to support informed decision-making. 
+        With expertise in Power BI, SQL, Python, Databricks, and BigQuery, I design and implement efficient data solutions 
+        that drive business success. My approach combines analytical precision with creative problem-solving to deliver intuitive
+        and impactful data visualizations, ensuring clarity and accuracy in every project."
         </p>
       </motion.div>
 
@@ -67,7 +68,7 @@ My approach is data-driven, with a focus on precision and clarity, ensuring ever
             transition: "transform 0.2s ease-out",
           }}
         >
-          <img src="./assets/About_pic.jpg" alt="Selva Profile" className="profile-image" />
+          <img src="./assets/About_pic.jpg" alt="Karthi Rajan  Profile" className="profile-image" />
         </div>
       </motion.div>
     </div>

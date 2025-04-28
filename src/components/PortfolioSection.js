@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const FILTERS = ['All', 'PowerBI', 'SQL', 'Tableau', 'Excel'];
+const FILTERS = ['All', 'Power BI', 'SQL', 'Tableau',];
 
 const rawPortfolioItems = [
   {
     id: 1,
-    type: 'PowerBI',
+    type: 'Power BI',
     src: './assets/SCML THUMP .png',
     description: 'Supply-Chain-and-Logistics-Analysis-Dashboard.',
     images: [
@@ -21,7 +21,7 @@ const rawPortfolioItems = [
 
   {
     id: 2,
-    type: 'PowerBI',
+    type: 'Power BI',
     src: './assets/LSS THUMP.png',
     description: 'LSS-Operational-Process-Chart',
     images: [
@@ -36,7 +36,6 @@ const rawPortfolioItems = [
     id: 10,
     type: 'SQL',
     src: './assets/COVIDS.png',
-    name: 'Covid_19-SQL-Data-Analysis',
     repoUrl: 'https://github.com/Karthi-Rajan/Covid_19-SQL-Data-Analysis',
   },
 
@@ -53,14 +52,7 @@ const rawPortfolioItems = [
     videoUrl: '',
     repoUrl: 'https://github.com/your-username/tableau-project-1',
   },
-  
-  {
-    id: 13,
-    type: 'Excel',
-    src: './assets/excel-thumb.webp',
-    name: 'Excel Analysis 1',
-    repoUrl: 'https://github.com/your-username/excel-project-1',
-  },
+
 ];
 
 const PortfolioSection = () => {
@@ -81,7 +73,7 @@ const PortfolioSection = () => {
   };
 
   const handleItemClick = (item) => {
-    if (item.type === 'PowerBI' || item.type === 'Tableau') {
+    if (item.type === 'Power BI' || item.type === 'Tableau') {
       setSelectedItem(item);
     } else {
       openLinkInNewTab(item.repoUrl);
@@ -137,7 +129,7 @@ const PortfolioSection = () => {
 
       {/* Modal for PowerBI and Tableau */}
       <AnimatePresence>
-        {selectedItem && (selectedItem.type === 'PowerBI' || selectedItem.type === 'Tableau') && (
+        {selectedItem && (selectedItem.type === 'Power BI' || selectedItem.type === 'Tableau') && (
           <motion.div
             className="portfolio-modal-overlay"
             onClick={() => setSelectedItem(null)}
@@ -156,11 +148,11 @@ const PortfolioSection = () => {
             >
               <div className="portfolio-modal-description">
                 <h2>Description</h2>
-                <p>{selectedItem.description}</p>
+                <p>{selectedItem.description || selectedItem.name}</p>
               </div>
 
               {/* Images */}
-              {selectedItem.images && (
+              {selectedItem.images && selectedItem.images.length > 0 && (
                 <div className="portfolio-modal-gallery">
                   {selectedItem.images.map((img, idx) => (
                     <img key={idx} src={img} alt={`Gallery ${idx + 1}`} />
