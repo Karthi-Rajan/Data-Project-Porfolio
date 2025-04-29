@@ -182,3 +182,24 @@
   font-size: 1.1rem;
   color: #333;
 }
+
+/* “Publish Page” button in the Tableau modal */
+.modal-action-button {
+  padding: 0.8rem 1.5rem;
+  margin-right: 1rem;              /* space between buttons */
+  background-color: #005f9e;       /* Tableau-blue */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-action-button:last-child {
+  margin-right: 0;                 /* no extra margin on the last button */
+}
+
+.modal-action-button:hover {
+  background-color: #003f6e;
+}
